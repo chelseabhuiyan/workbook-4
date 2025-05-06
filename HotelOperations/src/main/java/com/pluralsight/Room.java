@@ -22,15 +22,43 @@ public class Room {
         return price;
     }
 
-    public boolean isOccupied(){
+    public boolean isOccupied() {
         return occupiedRoom;
     }
 
-    public boolean isDirty(){
+    public boolean isDirty() {
         return dirtyRoom;
     }
 
-    public boolean isAvailable(){
+    public boolean isAvailable() {
         return !occupiedRoom && !dirtyRoom;
     }
+
+    public void checkIn() {
+        if (!isAvailable()) {
+            System.out.println("Room isn't available for check in");
+        } else {
+            occupiedRoom = true;
+            dirtyRoom = true;
+            System.out.println("Checked into room");
+        }
+    }
+    public void checkOut() {
+        if (!occupiedRoom) {
+            System.out.println("Room isn't occupied.");
+        } else {
+            occupiedRoom = false;
+            dirtyRoom = true;
+            System.out.println("Checked out. Room needs cleaning.");
+        }
+    }
+    public void cleanRoom() {
+        if (!dirtyRoom) {
+            System.out.println("Room is already clean.");
+        } else {
+            dirtyRoom = false;
+            System.out.println("Room cleaned.");
+        }
+    }
+
 }
