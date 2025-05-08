@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
+
 public class Employee {
     private String name;
     private String employeeId;
@@ -93,5 +96,16 @@ public class Employee {
         } else {
             System.out.println("Punch in first!"); //if user wasn't punched in
         }
+    }
+    public void punchIn() {
+        LocalDateTime now = LocalDateTime.now();
+        double currentTime = now.getHour() + now.getMinute() / 60.0;
+        punchIn(currentTime);
+    }
+
+    public void punchOut() {
+        LocalDateTime now = LocalDateTime.now();
+        double currentTime = now.getHour() + now.getMinute() / 60.0;
+        punchOut(currentTime);
     }
 }

@@ -3,7 +3,7 @@ package com.pluralsight;
 public class Main {
     public static void main(String[] args) {
         // Test Room
-        Room room = new Room(1, 120.00, false, false);
+        Room room = new Room(1, 120.00);
         System.out.println("ROOM");
         System.out.println("Number of beds: " + room.getNumberOfBeds());
         System.out.println("Price: $" + room.getPrice());
@@ -57,6 +57,8 @@ public class Main {
         employee.punchOut(13.0); // Punch out at 1:00 PM
         System.out.println("Total hours worked: " + employee.getHoursWorked());
         System.out.println("Total pay after punch in/out: $" + employee.getTotalPay());
+
+
     }
 
     /**
@@ -95,7 +97,7 @@ public class Main {
             System.out.println(r4.getPrice());
 
         }
-    }
+     }
      **/
 
 }

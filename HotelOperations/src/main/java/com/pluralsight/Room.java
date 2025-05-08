@@ -5,13 +5,12 @@ public class Room {
     private double price;
     private boolean occupiedRoom;
     private boolean dirtyRoom;
-    private boolean availableRoom;
 
-    public Room(int numberOfBeds, double price, boolean occupiedRoom, boolean dirtyRoom) {
+    public Room(int numberOfBeds, double price) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
-        this.occupiedRoom = occupiedRoom;
-        this.dirtyRoom = dirtyRoom;
+        this.occupiedRoom =false; //set default to free room
+        this.dirtyRoom = false; //set default to clean room
     }
 
     public int getNumberOfBeds() {
@@ -60,5 +59,8 @@ public class Room {
             System.out.println("Room cleaned.");
         }
     }
+
+
+
 
 }
